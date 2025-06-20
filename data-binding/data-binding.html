@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-6 bg-success p-3">
+        <h3>One Way</h3>
+        <div class="row">
+            <div class="col-6 bg-warning p-3">
+                from .ts to .html
+                 <br>
+                ==>Interpolation & Property Binding
+            </div>
+            <div class="col-6 bg-secondary p-3">
+                from .html to .ts   
+                <br>
+                Event Binding     
+            </div>
+        </div>
+    </div>
+    <div class="col-6 bg-danger">
+        <h3>Two Way</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        course Name => {{courseName}}
+        <br>
+        <h1>{{courseDuration}}</h1>
+    </div>
+    <div class="col-3">
+        <input type="text" placeholder="Enter Name" value="{{courseName}}">
+    </div>
+    <div class="col-3">
+        <input type="text" [value] ="courseName" [placeholder] = "myPlaceholderText">
+    </div>
+    <div class="col-3">
+        <div [class] = "clsName">
+            Divvvvv
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="showWelcomeText()">Show Alert</button>
+    </div>
+    <div class="col-2">
+        <button class="btn btn-primary" (click)="showMessage('Angular')">Show Alert</button>
+    </div>
+    <div class="col-2">
+        <button class="btn btn-primary" (click)="showMessage('React')">Show Alert</button>
+    </div>
+    <div class="col-3">
+        <select (change)="onStateChange()">
+            <option value="">Maharashtra</option>
+            <option value="">Punjab</option>
+            <option value="">Goa</option>
+        </select>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="col-3">
+        <input type="text" [(ngModel)]="courseName">
+    </div>
+    <div class="col-3">
+        <input type="checkbox" [(ngModel)]="isActive">
+    </div>
+</div>
